@@ -1,19 +1,21 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import Button from '@/components/Button.vue';
+import { useAppSettings } from '@/composables/AppSettings';
 // import { ref } from 'vue'
 // 
 // defineProps<{ msg: string }>()
 // 
 // const count = ref(0)
 
-const hideSidebar = ref(false);
+const appSettings = useAppSettings();
+const hideSidebar = computed(() => appSettings.hideSidebar.value);
 
 const icon = computed(() => hideSidebar.value ? 'fa-eye': 'fa-eye-slash');
 const label = computed(() => hideSidebar.value ? 'Show': 'Hide');
 
 function toggle() { 
-  hideSidebar.value = !hideSidebar.value;
+  appSettings.toggleSidebar();
 }
 </script>
 

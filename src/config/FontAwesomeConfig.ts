@@ -1,7 +1,7 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faSun, faMoon, faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons';
-import { faPlus, faTableColumns } from '@fortawesome/free-solid-svg-icons';
+import { faEllipsisVertical, faPlus, faTableColumns } from '@fortawesome/free-solid-svg-icons';
 
 export default function useFontAwesomeLibrary() {
     library.add(faSun);
@@ -11,6 +11,7 @@ export default function useFontAwesomeLibrary() {
     library.add(faEyeSlash);
     library.add(faTableColumns);
     library.add(faPlus);
+    library.add(faEllipsisVertical);
 
     return FontAwesomeIcon;
 }

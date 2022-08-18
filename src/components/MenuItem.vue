@@ -29,24 +29,6 @@ const to = computed(() => props.to);
 </template>
 
 <style scoped lang="postcss">
-.active{ 
-    position: relative;
-    color: var(--color-text-light)
-}
-.active::before { 
-  content: '';
-  display:block;
-  position: absolute;  
-  left:-2em;
-  width:100%;
-  top: 0em;
-  height: 100%;
-  border-top-right-radius: 2em;
-  border-bottom-right-radius: 2em;
-  background: var(--color-purple);
-  z-index:-1;
-}
-
 a{ 
     display:block;
     color: var(--color-text-gray);
@@ -58,6 +40,24 @@ a{
     }
     &.secondary{ 
         color: var(--color-purple)
+    }
+
+    &.active{ 
+        position: relative;
+        color: var(--color-text-light);
+        &::before { 
+            content: '';
+            display:block;
+            position: absolute;  
+            left:-2em;
+            width:100%;
+            top: 0em;
+            height: 100%;
+            border-top-right-radius: 2em;
+            border-bottom-right-radius: 2em;
+            background: var(--color-purple);
+            z-index:-1;
+        }
     }
 }
 </style>

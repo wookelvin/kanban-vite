@@ -3,20 +3,21 @@ import Sidebar from './components/Sidebar.vue';
 </script>
 
 <template>
-<div class="wrapper">
-  <Sidebar/>
-  <main>
-    <router-view />
-  </main>
-</div>
-
-
+  <div class="wrapper">
+    <Sidebar />
+    <main>
+      <router-view />
+    </main>
+  </div>
 </template>
 
-<style scoped>
+<style scoped lang="postcss">
 
 .wrapper{ 
   height:100vh;
   display:flex;
+  main { 
+    flex: 1;
+  }
 }
 </style>

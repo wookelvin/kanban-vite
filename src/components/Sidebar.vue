@@ -1,25 +1,21 @@
 <script setup lang="ts">
 import Logo from './Logo.vue';
-import ColumnTitle from './ColumnTitle.vue';
-import { ref } from 'vue'
-import MenuItem from './MenuItem.vue';
 import LightDarkToggleSwitch from './LightDarkToggleSwitch.vue';
 import ToggleSidebarButton from './ToggleSidebarButton.vue';
 import BoardsMenu from './BoardsMenu.vue';
 </script>
 
 <template>
-<nav class="sidebar">
-<div>
-    <Logo />
-    
-    <BoardsMenu />
-</div>
-<div>
-    <LightDarkToggleSwitch />
-    <ToggleSidebarButton />
-</div>
-</nav>
+  <nav class="sidebar">
+    <div>
+      <Logo />
+      <BoardsMenu />
+    </div>
+    <div>
+      <LightDarkToggleSwitch />
+      <ToggleSidebarButton />
+    </div>
+  </nav>
 </template>
 
 <style scoped>
